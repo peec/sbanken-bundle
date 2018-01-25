@@ -48,8 +48,14 @@ You will be asked to fill in client_id, client_secret and customer_id. Get these
 This bundle exposes a new service `pkj_sbanken.client` which you have access to getApi().
 
 ```
-$api = $this->get('pkj_sbanken.client')->getApi();
-$api->authorize(); // Get access token.
-// etc.
-// See https://github.com/peec/sbanken for available methods on $api.
+// Example, this can be run from controllers:
+
+$bankAccountNumber = 11111111111;
+$transactionRequest = new TransactionListRequest($bankAccountNumber);
+
+$api = $transactions = $this->get('pkj_sbanken.client')->getApi();
+$api->authorize();
+$transactions = $api->Transactions()->getList($transactionRequest);
+var_dump($transactions);
+exit;
 ```
