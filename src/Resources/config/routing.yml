@@ -1,0 +1,3 @@
+pkj_sbanken_homepage:
+    path:     /
+    defaults: { _controller: PkjSbankenBundle:Default:index }

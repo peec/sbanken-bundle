@@ -1,0 +1,12 @@
+parameters:
+    pkj_sbanken.client.class: Pkj\Bundle\SbankenBundle\Sbanken\Client
+    pkj.sbanken.client_id: ~
+    pkj.sbanken.client_secret: ~
+    pkj.sbanken.customer_id: ~
+services:
+    pkj_sbanken.client:
+        class: '%pkj_sbanken.client.class%'
+        arguments:
+            - '%pkj.sbanken.client_id%'
+            - '%pkj.sbanken.client_secret%'
+            - '%pkj.sbanken.customer_id%'

@@ -1,0 +1,13 @@
+{
+  "name": "pkj/sbanken-bundle",
+  "type": "library",
+
+  "autoload": {
+    "psr-4": {
+      "Pkj\\Bundle\\SbankenBundle\\": "src"
+    }
+  },
+  "require": {
+    "pkj/sbanken": "^1.0"
+  }
+}
